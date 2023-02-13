@@ -34,4 +34,4 @@ jobs:
          cp -f ./Yanis07_SandboxVars.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
          cp -f ./Yanis07_spawnpoints.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
          cp -f ./Yanis07_spawnregions.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
-         docker restart -s 455cebcde21305d0ebb51431b40d6cc60d8e8c46000de7adc41fb33b50cd6399
+         docker restart -s pzserver1_PROD-ZomboidServer_1
