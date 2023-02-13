@@ -33,6 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
          ls -R
-         pvd
+         pwd
          cd /home 
          ls -r
