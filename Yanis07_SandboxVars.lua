@@ -650,9 +650,9 @@ SandboxVars = {
         -- Minimum=0.00 Maximum=100.00 Default=2.00
         Crawler = 5.0,
         -- Minimum=0.00 Maximum=100.00 Default=15.00
-        Shambler = 90.0,
+        Shambler = 10.0,
         -- Minimum=0.00 Maximum=100.00 Default=78.00
-        FastShambler = 5.0,
+        FastShambler = 85.0,
         -- Minimum=0.00 Maximum=100.00 Default=5.00
         Sprinter = 0.0,
         -- Minimum=0.00 Maximum=100.00 Default=0.00
