@@ -34,4 +34,4 @@ jobs:
          cp -f ./Yanis07_SandboxVars.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
          cp -f ./Yanis07_spawnpoints.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
          cp -f ./Yanis07_spawnregions.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
-         docker restart 455cebcde21305d0ebb51431b40d6cc60d8e8c46000de7adc41fb33b50cd6399
+         docker restart ca090426545d86be370ac0251acb06bd7c7397cf94af505a55f7c2fd62f928f5
