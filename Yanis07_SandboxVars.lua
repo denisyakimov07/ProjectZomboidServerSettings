@@ -782,7 +782,7 @@ SandboxVars = {
         -- Minimum=0.00 Maximum=1000.00 Default=1.00
         TranscribeSpeed = 10.0,
         -- Minimum=0.00 Maximum=1000.00 Default=1.00
-        ReadTimeSpeed = 1.0,
+        ReadTimeSpeed = 10.0,
         RecoverProfessionAndTraitsBonuses = true,
         TranscribeTVXP = true,
         RecoverPassiveSkills = true,
