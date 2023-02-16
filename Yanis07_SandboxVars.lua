@@ -780,7 +780,7 @@ SandboxVars = {
         -- Minimum=1 Maximum=100 Default=100
         RecoveryPercentage = 100,
         -- Minimum=0.00 Maximum=1000.00 Default=1.00
-        TranscribeSpeed = 1.0,
+        TranscribeSpeed = 10.0,
         -- Minimum=0.00 Maximum=1000.00 Default=1.00
         ReadTimeSpeed = 1.0,
         RecoverProfessionAndTraitsBonuses = true,
