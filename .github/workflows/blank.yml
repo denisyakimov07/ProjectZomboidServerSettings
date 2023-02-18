@@ -30,8 +30,12 @@ jobs:
         run: |
          ls -R
          pwd
+         python3 ./mod_reader.py
          cp -f ./Yanis07.ini /home/azureuser/PZHDD1/PZServer1/data/Server/
-         cp -f ./Yanis07_SandboxVars.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
-         cp -f ./Yanis07_spawnpoints.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
-         cp -f ./Yanis07_spawnregions.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
          docker restart ca090426545d86be370ac0251acb06bd7c7397cf94af505a55f7c2fd62f928f5
+
+
+# cp -f ./Yanis07.ini /home/azureuser/PZHDD1/PZServer1/data/Server/
+#          cp -f ./Yanis07_SandboxVars.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
+#          cp -f ./Yanis07_spawnpoints.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
+#          cp -f ./Yanis07_spawnregions.lua /home/azureuser/PZHDD1/PZServer1/data/Server/
