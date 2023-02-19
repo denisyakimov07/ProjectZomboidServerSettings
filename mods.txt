@@ -11,7 +11,3 @@ Map Folder: Ashenwood
 
 Workshop ID: 2657661246
 Mod ID: RainWash
-
-Workshop ID: 2730975264
-Mod ID: Chinatown
-Map Folder: Chinatown
