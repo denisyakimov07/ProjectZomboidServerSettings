@@ -602,7 +602,7 @@ SandboxVars = {
         -- The fraction of a cell's desired population that may respawn every RespawnHours. Minimum=0.00 Maximum=1.00 Default=0.10
         RespawnMultiplier = 0.01,
         -- The number of hours that must pass before zombies migrate to empty parts of the same cell. If zero, migration is disabled. Minimum=0.00 Maximum=8760.00 Default=12.00
-        RedistributeHours = 150.0,
+        RedistributeHours = 287.0,
         -- The distance a zombie will try to walk towards the last sound it heard. Minimum=10 Maximum=1000 Default=100
         FollowSoundDistance = 100,
         -- The size of groups real zombies form when idle. Zero means zombies don't form groups. Groups don't form inside buildings or forest zones. Minimum=0 Maximum=1000 Default=20
@@ -617,19 +617,23 @@ SandboxVars = {
     VehicleRepairOverhaul = {
         DisableVehicleSalvage = false,
     },
-    RVInterior = {
-        -- Minimum=0 Maximum=100 Default=20
-        SafeZombieDistance = 20,
-        NotWhenChased = true,
+    KillCount = {
+        doExport = false,
+        includePostDeathUI = true,
+        -- Minimum=0 Maximum=10000000 Default=500
+        MaxUpdateDelay = 500,
+        shareOnServer = true,
+        keepTrackOfDead = true,
     },
-    StockDamage = {
-        -- Minimum=0.00 Maximum=200.00 Default=10.00
-        FirearmDamage = 10.0,
-        -- Minimum=0.00 Maximum=100.00 Default=0.35
-        StockEndurance = 0.35,
-        StockEnduranceBoolean = true,
-        -- Minimum=0.00 Maximum=100.00 Default=0.00
-        ReduceCondition = 0.002,
+    DAMN = {
+        AllowBushmasterSpawns = true,
+        AllowPowerChadSpawns = true,
+    },
+    HeadWearWontFall = {
+        Chance = 1,
+    },
+    ProxInv = {
+        ZombieOnly = false,
     },
     BecomeDesensitized = {
         -- Minimum=1 Maximum=10000 Default=500
@@ -639,15 +643,110 @@ SandboxVars = {
         ConsiderTraits = true,
         ConsiderOccupations = true,
     },
-    FuelAPI = {
-        -- Minimum=100.00 Maximum=5000.00 Default=400.00
-        BarrelMaxCapacity = 400.0,
+    UdderlySafeLogin = {
+        -- Minimum=1.00 Maximum=120.00 Default=20.00
+        SafeTime = 20.0,
         -- Minimum=0.00 Maximum=1.00 Default=0.50
-        BarrelRandomQuantityPercent = 0.5,
-        BarrelCanPickupFull = false,
+        MovementMultiplier = 0.5,
+        UseInvisbiility = false,
+    },
+    UndeadSurvivor = {
+        -- Minimum=0.00 Maximum=100.00 Default=0.04
+        StalkerChance = 0.04,
+        -- Minimum=0.00 Maximum=100.00 Default=0.04
+        NomadChance = 0.04,
+        -- Minimum=0.00 Maximum=100.00 Default=0.04
+        PrepperChance = 0.04,
+        -- Minimum=0.00 Maximum=100.00 Default=0.04
+        HeadhunterChance = 0.04,
+        -- Minimum=0.00 Maximum=100.00 Default=0.08
+        AmazonaChance = 0.08,
+    },
+    SOTO = {
+        AgilityTraitsObtainable = true,
+        CombatTraitsObtainable = true,
+        SurvTraitsObtainable = false,
+        CraftTraitsObtainable = false,
+        FirearmTraitsObtainable = true,
+        AddFitXPWhileRun = true,
+        -- Minimum=1 Maximum=100000 Default=240
+        LoseCowardlyHoursMIN = 168,
+        -- Minimum=1 Maximum=100000 Default=504
+        LoseCowardlyHoursMAX = 336,
+        -- Minimum=1 Maximum=100000 Default=1500
+        LoseCowardlyZombMIN = 1000,
+        -- Minimum=1 Maximum=100000 Default=3000
+        LoseCowardlyZombMAX = 2000,
+        -- Minimum=1 Maximum=100000 Default=672
+        EarnBraveHoursMIN = 336,
+        -- Minimum=1 Maximum=100000 Default=1008
+        EarnBraveHoursMAX = 672,
+        -- Minimum=1 Maximum=100000 Default=4000
+        EarnBraveZombMIN = 2500,
+        -- Minimum=1 Maximum=100000 Default=6000
+        EarnBraveZombMAX = 3500,
+        -- Minimum=1 Maximum=100000 Default=1176
+        EarnDesensitizedHoursMIN = 1080,
+        -- Minimum=1 Maximum=100000 Default=1512
+        EarnDesensitizedHoursMAX = 1680,
+        -- Minimum=1 Maximum=100000 Default=7000
+        EarnDesensitizedZombMIN = 5500,
+        -- Minimum=1 Maximum=100000 Default=9000
+        EarnDesensitizedZombMAX = 8500,
+        -- Minimum=1 Maximum=100000 Default=672
+        LosePacifistHoursMIN = 672,
+        -- Minimum=1 Maximum=100000 Default=1008
+        LosePacifistHoursMAX = 1008,
+        -- Minimum=1 Maximum=100000 Default=1500
+        LosePacifistZombMIN = 1500,
+        -- Minimum=1 Maximum=100000 Default=2500
+        LosePacifistZombMAX = 2500,
+        -- Minimum=0 Maximum=10 Default=7
+        LosePacifistSkillLvl = 7,
+    },
+    ValhallaAegis = {
+        SanitizeFilenamesForWindows = false,
+        EnableItemTransferProtection = true,
+        BlockedItemsForTransfer = "Base.ATMReceiver",
+        EnableEventCoordinationTools = false,
+        EnableTrapSetLogging = false,
+        EnableTrapSetKicking = false,
+        BlockAllPickups = false,
+        BlockAllDisassembly = false,
+        EnableMovPickupLogging = true,
+        EnableContainerProtection = true,
+        AllowContainerPickup = true,
+        EnableSHClaimThrottling = true,
+        -- Minimum=1 Maximum=3600 Default=180
+        SHDestructionTimerMin = 180,
+        EnableSHOwnerCheck = false,
+        EnableVehicleOwnership = true,
+        EnablePARPNames = false,
+        -- Minimum=1 Maximum=255 Default=5
+        VehicleOwnershipClaimNo = 5,
+        AllowVehicleManageFromCell = false,
+        AllowPastOwnerReclaim = false,
+        AllowPlayerVehicleRelease = false,
+        -- Minimum=1 Maximum=365 Default=6
+        AllowVehicleReleaseAfterDays = 6,
+        AllowVehicleWindowSmashing = false,
+        AllowVehicleTowing = true,
+        AllowDoorAndTrunkAccess = true,
+        AllowStealingFromVehicleContainers = true,
+        AllowSiphonGas = true,
+        EnableVehicleDataLogging = false,
+    },
+    FitnessIsALifestyle = {
+        Hardcore = false,
+        -- Minimum=1.00 Maximum=100.00 Default=3.00
+        XPMultiplier = 3.0,
     },
     PlayerConnectionMessage = {
+        disableDeathMessage = true,
+        disableKillMessage = true,
         hideAdmin = true,
+        hideModerator = false,
+        hideStaff = false,
         -- Minimum=0.00 Maximum=1.00 Default=0.00
         connectedMessageColorRed = 0.0,
         -- Minimum=0.00 Maximum=1.00 Default=0.70
@@ -661,15 +760,61 @@ SandboxVars = {
         -- Minimum=0.00 Maximum=1.00 Default=0.00
         disconnectedMessageColorBlue = 0.0,
     },
-    HeadWearWontFall = {
-        Chance = 1,
+    DecreasingVehicleCondition = {
+        -- Minimum=0 Maximum=10000 Default=1
+        StartDay = 1,
+        -- Minimum=0 Maximum=10000 Default=50
+        PeakDay = 50,
+        -- Minimum=0 Maximum=300 Default=1
+        OriginalChance = 30,
+        -- Minimum=0 Maximum=300 Default=50
+        MaxChance = 50,
+        RemoveParts = true,
+        DamageParts = true,
+        BreakLocks = true,
+        ReduceBatteryLife = true,
+        DeflateTires = true,
+        -- Minimum=0.00 Maximum=10.00 Default=0.75
+        BatteryChanceMultiplier = 0.75,
+        -- Minimum=0.00 Maximum=10.00 Default=0.70
+        RadioChanceMultiplier = 0.7,
+        -- Minimum=0.00 Maximum=10.00 Default=0.25
+        GloveBoxChanceMultiplier = 0.25,
+        -- Minimum=0.00 Maximum=10.00 Default=1.00
+        HeadlightChanceMultiplier = 1.0,
+        -- Minimum=0.00 Maximum=10.00 Default=0.20
+        SeatChanceMultiplier = 0.2,
+        -- Minimum=0.00 Maximum=10.00 Default=0.25
+        DoorChanceMultiplier = 0.25,
+        -- Minimum=0.00 Maximum=10.00 Default=0.85
+        WindowChanceMultiplier = 0.85,
+        -- Minimum=0.00 Maximum=10.00 Default=0.85
+        WindshieldChanceMultiplier = 0.85,
+        -- Minimum=0.00 Maximum=10.00 Default=0.45
+        TrunkChanceMultiplier = 0.45,
+        -- Minimum=0.00 Maximum=10.00 Default=0.25
+        TrunkDoorChanceMultiplier = 0.25,
+        -- Minimum=0.00 Maximum=10.00 Default=0.65
+        SuspensionChanceMultiplier = 0.65,
+        -- Minimum=0.00 Maximum=10.00 Default=0.65
+        BrakeChanceMultiplier = 0.65,
+        -- Minimum=0.00 Maximum=10.00 Default=0.45
+        TireChanceMultiplier = 0.45,
+        -- Minimum=0.00 Maximum=10.00 Default=0.65
+        GasTankChanceMultiplier = 0.65,
+        -- Minimum=0.00 Maximum=10.00 Default=0.65
+        EngineChanceMultiplier = 0.65,
+        -- Minimum=0.00 Maximum=10.00 Default=0.35
+        EngineDoorChanceMultiplier = 0.35,
+        -- Minimum=0.00 Maximum=10.00 Default=0.65
+        MufflerChanceMultiplier = 0.65,
+        -- Minimum=0.00 Maximum=10.00 Default=0.70
+        DefaultChanceMultiplier = 0.7,
     },
-    UdderlySafeLogin = {
-        -- Minimum=1.00 Maximum=120.00 Default=20.00
-        SafeTime = 20.0,
-        -- Minimum=0.00 Maximum=1.00 Default=0.50
-        MovementMultiplier = 0.5,
-        UseInvisbiility = false,
+    RVInterior = {
+        -- Minimum=0 Maximum=100 Default=20
+        SafeZombieDistance = 20,
+        NotWhenChased = true,
     },
     BLTRandomZombies = {
         -- Minimum=0.00 Maximum=100.00 Default=2.00
@@ -691,110 +836,12 @@ SandboxVars = {
         -- Minimum=1000 Maximum=60000 Default=7500
         Frequency = 7500,
     },
-    UndeadSurvivor = {
-        -- Minimum=0.00 Maximum=100.00 Default=0.04
-        StalkerChance = 0.04,
-        -- Minimum=0.00 Maximum=100.00 Default=0.04
-        NomadChance = 0.04,
-        -- Minimum=0.00 Maximum=100.00 Default=0.04
-        PrepperChance = 0.04,
-        -- Minimum=0.00 Maximum=100.00 Default=0.04
-        HeadhunterChance = 0.04,
-        -- Minimum=0.00 Maximum=100.00 Default=0.08
-        AmazonaChance = 0.08,
-    },
-    DAMN = {
-        AllowPowerChadSpawns = true,
-        AllowBushmasterSpawns = true,
-    },
-    DecreasingVehicleCondition = {
-        -- Minimum=0 Maximum=10000 Default=1
-        StartDay = 1,
-        -- Minimum=0 Maximum=10000 Default=50
-        PeakDay = 50,
-        -- Minimum=0 Maximum=300 Default=1
-        OriginalChance = 30,
-        -- Minimum=0 Maximum=300 Default=50
-        MaxChance = 50,
-        RemoveParts = true,
-        DamageParts = true,
-        BreakLocks = true,
-        ReduceBatteryLife = true,
-        DeflateTires = true,
-    },
-    ValhallaAegis = {
-        SanitizeFilenamesForWindows = false,
-        EnableItemTransferProtection = true,
-        BlockedItemsForTransfer = "Base.ATMReceiver",
-        EnableEventCoordinationTools = false,
-        EnableTrapSetLogging = false,
-        EnableTrapSetKicking = false,
-        BlockAllPickups = false,
-        BlockAllDisassembly = false,
-        EnableMovPickupLogging = true,
-        EnableContainerProtection = true,
-        AllowContainerPickup = true,
-        EnableSHClaimThrottling = true,
-        -- Minimum=1 Maximum=3600 Default=180
-        SHDestructionTimerMin = 180,
-        EnableSHOwnerCheck = false,
-        EnableVehicleOwnership = true,
-        EnablePARPNames = false,
-        -- Minimum=1 Maximum=10 Default=5
-        VehicleOwnershipClaimNo = 5,
-        AllowVehicleManageFromCell = false,
-        AllowPastOwnerReclaim = false,
-        AllowPlayerVehicleRelease = false,
-        -- Minimum=1 Maximum=365 Default=6
-        AllowVehicleReleaseAfterDays = 6,
-        AllowVehicleWindowSmashing = false,
-        AllowVehicleTowing = true,
-        AllowDoorAndTrunkAccess = true,
-        AllowStealingFromVehicleContainers = true,
-        AllowSiphonGas = true,
-        EnableVehicleDataLogging = false,
-    },
-    FitnessIsALifestyle = {
-        Hardcore = false,
-        -- Minimum=1.00 Maximum=100.00 Default=3.00
-        XPMultiplier = 3.0,
-    },
-    SOTO = {
-        TraitsProgress = true,
-        -- Minimum=1 Maximum=100000 Default=168
-        LoseCowardlyHoursMIN = 168,
-        -- Minimum=1 Maximum=100000 Default=336
-        LoseCowardlyHoursMAX = 336,
-        -- Minimum=1 Maximum=100000 Default=1000
-        LoseCowardlyZombMIN = 1000,
-        -- Minimum=1 Maximum=100000 Default=2000
-        LoseCowardlyZombMAX = 2000,
-        -- Minimum=1 Maximum=100000 Default=336
-        EarnBraveHoursMIN = 336,
-        -- Minimum=1 Maximum=100000 Default=672
-        EarnBraveHoursMAX = 672,
-        -- Minimum=1 Maximum=100000 Default=2500
-        EarnBraveZombMIN = 2500,
-        -- Minimum=1 Maximum=100000 Default=3500
-        EarnBraveZombMAX = 3500,
-        -- Minimum=1 Maximum=100000 Default=1080
-        EarnDesensitizedHoursMIN = 1080,
-        -- Minimum=1 Maximum=100000 Default=1680
-        EarnDesensitizedHoursMAX = 1680,
-        -- Minimum=1 Maximum=100000 Default=5500
-        EarnDesensitizedZombMIN = 5500,
-        -- Minimum=1 Maximum=100000 Default=8500
-        EarnDesensitizedZombMAX = 8500,
-        -- Minimum=1 Maximum=100000 Default=672
-        LosePacifistHoursMIN = 672,
-        -- Minimum=1 Maximum=100000 Default=1008
-        LosePacifistHoursMAX = 1008,
-        -- Minimum=1 Maximum=100000 Default=1500
-        LosePacifistZombMIN = 1500,
-        -- Minimum=1 Maximum=100000 Default=2500
-        LosePacifistZombMAX = 2500,
-        -- Minimum=0 Maximum=10 Default=7
-        LosePacifistSkillLvl = 7,
+    CommonSense = {
+        PryingMechanic = true,
+        -- Minimum=-100 Maximum=100 Default=0
+        PryingChanceModifier = 0,
+        PartsHighlighter = true,
+        ColorFilter = false,
     },
     SkillRecoveryJournal = {
         -- Minimum=1 Maximum=100 Default=100
@@ -813,5 +860,13 @@ SandboxVars = {
         RecoverAgilitySkills = true,
         RecoverRecipes = true,
         RecoveryJournalUsed = true,
+        Craftable = true,
+    },
+    FuelAPI = {
+        -- Minimum=100.00 Maximum=5000.00 Default=400.00
+        BarrelMaxCapacity = 400.0,
+        -- Minimum=0.00 Maximum=1.00 Default=0.50
+        BarrelRandomQuantityPercent = 0.5,
+        BarrelCanPickupFull = false,
     },
 }
